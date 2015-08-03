@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menu type:</strong>
+  <%= @website.menu_type %>
+</p>
+
+<p>
+  <strong>Website name:</strong>
+  <%= @website.website_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @website.description %>
+</p>
+
+<p>
+  <strong>Likes:</strong>
+  <%= @website.likes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @website.user_id %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @website.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @website.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>
