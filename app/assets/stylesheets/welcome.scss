@@ -1,0 +1,258 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body
+{
+	background-image: url("../images/background2.jpg");
+	min-width: 1000px; 
+}
+
+div.carousel_content
+{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	margin-left:auto;
+    margin-right:auto;
+  	
+}
+
+div.carousel
+{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+
+div.carousel_text
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:3%;
+	width:60%;
+	height:40%;
+	font-size: 150%;
+
+}
+
+
+div.category 
+{
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20%;
+	background: rgba(0,0,0,0.5);
+ 	position: relative;
+
+}
+
+div.info
+{
+	width: 60%;		
+	height:50px;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 10%;
+	border: 2px solid white;
+  	border-radius: 10px;
+  	position: relative;
+  	display:flex;
+}
+
+div.item
+{
+	height:500px;
+}
+div.title
+{
+	width:100%;
+	height: 15%;
+}
+div.like
+{
+	height:50px;	
+	width:50px;
+	background-image: url("../images/like.png");
+	background-size: cover;
+	top:0px;
+	right: 20%;
+	position: absolute;	
+}
+
+div.likes
+{
+	top:30%;
+	right: 12%;
+	position: absolute;	
+	color:white;
+}
+
+h1.carousel_content_title
+{
+	margin-left: 20%;
+	color: white;
+}
+
+	div.date
+{
+	width:30% ;
+	height:50px;
+	margin-top: 2%;
+	margin-left:10%;
+	color:white;
+}
+#myCarousel2{
+	margin-bottom: 20%;
+}
+
+p
+{
+	color:#3D3D3D;
+}
+
+p.allWS
+{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;	
+}
+
+a
+{
+	color:white;
+}
+
+//////////////////////
+
+div.main
+{
+	width:80%;
+	height:900px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+div.category_all 
+{
+	margin-top: 5%;
+	width:77%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20%;
+	background: rgba(0,0,0,0.5);
+ 	position: relative;
+
+}
+
+h1.category
+{
+	color:white;	
+}
+
+
+div.column
+{
+	width: 100%;
+	height: 23%;
+	margin-top: 1.5%;
+}
+
+div.ws
+{
+	float: left;
+	height:100%;
+	width:23%;
+	margin-left: 1.5%;
+	background: rgba(0,0,0,0.2);
+	border: 2px solid white;
+  	border-radius: 10px;
+  	position: relative;	
+}
+
+.ws:hover .discription
+{
+	visibility: visible;
+}
+
+.ws:hover .info
+{
+	visibility: hidden;
+}
+
+.ws:hover h3
+{
+	visibility: hidden;
+}
+
+div.discription
+{
+	visibility: hidden;
+	position: absolute;
+	width:80%;
+	height:90%;	
+	top: 5%;
+	left: 10%;
+	overflow: hidden;
+	font: 12pt;
+}
+
+div.info_all
+{
+	width: 98%;		
+	height:50px;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 47%;
+  	position: relative;
+  	display:flex;
+
+}
+
+div.like_all
+{
+	height:50px;	
+	width:50px;
+	background-image: url("../images/like.png");
+	background-size: cover;
+	top:0px;
+	right: 30%;
+	position: absolute;	
+}
+
+div.likes_all
+{
+	top:30%;
+	right: 12%;
+	position: absolute;	
+	color:white;
+}
+
+div.date_all
+{
+	width:30% ;
+	height:50px;
+	top: 30%;
+    position: absolute;
+	margin-left:10%;
+	color:white;
+}
+
+h3
+{
+	color: white;
+	margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+

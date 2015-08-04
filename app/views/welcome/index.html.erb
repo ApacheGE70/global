@@ -1,0 +1,84 @@
+
+    <div class="category">
+      <h1 class="category">Best</h1>
+      <p class ="allWS"><%= link_to "all_WebSites",  welcome_all_path %></p>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <% for i in 1..4 do %>
+       	  <li data-target="#myCarousel" data-slide-to="<%=i%>"></li>
+        <% end %>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <% @websites_best.each do |website| %>
+       	  <div class="item<%= " active" if website == @websites_best.first  %>">
+            <div class="carousel_content">
+              <h1 class="carousel_content_title"><%= website.website_name %></h1>
+              <hr>
+              <div class="carousel_text">
+	              <p><%= website.description %></p>
+              </div> 
+              <div class="info">
+                <div class = "date"><%= website.created_at %></div>
+                <div class="like"></div>
+                <div class="likes"><%= website.likes %></div>
+              </div>     
+            </div>
+         </div>
+        <% end %>
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>  
+
+    <div class="category">
+      <h1 class="category">Latest</h1>
+      <p class ="allWS"><p class ="allWS"><%= link_to "all_WebSites",  welcome_all_path %></p></p>
+    </div>
+
+        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+        <% for i in 1..4 do %>
+       	  <li data-target="#myCarousel2" data-slide-to="<%=i%>"></li>
+        <% end %>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <% @websites_last.each do |website| %>
+       	  <div class="item<%= " active" if website == @websites_last.first  %>">
+            <div class="carousel_content">
+              <h1 class="carousel_content_title"><%= website.website_name %></h1>
+              <hr>
+              <div class="carousel_text">
+	              <p><%= website.description %></p>
+              </div> 
+              <div class="info">
+                <div class = "date"><%= website.created_at %></div>
+                <div class="like"></div>
+                <div class="likes"><%= website.likes %></div>
+              </div>     
+            </div>
+         </div>
+        <% end %>
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
