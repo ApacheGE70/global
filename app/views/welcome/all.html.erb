@@ -1,47 +1,29 @@
-<div class="category">
-    <h1 class="category_all">All</h1>
-</div>
-
-<div class="main">  
-	<% for i in 0...@columns do %>
-    <div class="column">
-    	<% for j in 0..3 do %>
-    	<% index = i*4+j %>
-        <%= link_to root_path do %>
-        <div class="ws">
-            <h3><%= @websites_all[index].website_name %></h3>
-            <div class="discription">
-            <p>
-              <%= @websites_all[index].description %>
-            </p>
-            </div>
-            
-            <div class="info_all">
-                <div class = "date_all"><%= @websites_all[index].created_at %></div>
-	            <div class="like_all"></div>
-	            <div class="likes_all"><%= @websites_all[index].likes %></div>
-            </div>      
-        </div>
-    	<% end %>
-    	<% end %>
+<div class="container">
+    <% for i in 0...@rows do %>
+    <div class="row">
+    <div class="margin-blyat-dont-work">
+        <% for j in 0..3 do %>
+        <% index = i*3+j %>
+        
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2><%= @websites_all[index].website_name %></h2>
+              <p><%= @websites_all[index].description %></p>
+              <div><%= link_to 'View details', @websites_all[index], class:"btn btn-default" %></div>
+            </div><!--/span-->
+        <% end %>
     </div>
     <% end %>
 
-    <div class="column">
-    <% for i in 0...@rest do %>
-    <%= link_to root_path do %>
-    <div class="ws">
-        <h3><%= @websites_all[i].website_name %></h3>
-        <div class="discription">
-          <p><%= @websites_all[i].description %></p>
-        </div> 
-          
-        <div class="info_all">
-            <div class = "date_all"><%= @websites_all[i].created_at %></div>
-	        <div class="like_all"></div>
-	        <div class="likes_all"><%= @websites_all[i].likes %></div>
-        </div>      
+    <div class="row">
+    <div class="margin-blyat-dont-work">
+        <% for i in 0...@rest do %>
+            <div class="col-md-4">
+              <h2><%= @websites_all[i].website_name %></h2>
+              <p><%= @websites_all[i].description %></p>
+              <div class="link_bottom"><%= link_to 'View details', @websites_all[i], class:"btn btn-default" %></div>
+            </div><!--/span-->
+        <% end %>
     </div>
-    <% end %>
-    <% end %>
+    </div>
+
 </div>

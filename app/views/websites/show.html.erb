@@ -1,39 +1,56 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Menu type:</strong>
-  <%= @website.menu_type %>
-</p>
+<div class="row row-offcanvas row-offcanvas-right">
+  <div class="col-xs-12 col-sm-9">
+    <p class="pull-right visible-xs">
+      <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+    </p>
 
-<p>
-  <strong>Website name:</strong>
-  <%= @website.website_name %>
-</p>
+    <div class="jumbotron_2">
+      <h1 align="center"><%= @website.website_name %></h1>
+      <p align="center"><%= @website.description %></p>
+    </div>
+    
+    <div class="row">
+      <div class="col-6 col-sm-6 col-lg-4">
+        <h2>БЛОК БЛЯТЬ РАЗ</h2>
+        <p>Сюда ебанём текст!</p>
+      </div><!--/span-->
+      
+      <div class="col-6 col-sm-6 col-lg-4">
+        <h2>БЛОК БЛЯТЬ ДВА</h2>
+        <p>Сюда тоже что-нибудь ебанём!</p>
+      </div><!--/span-->
+      
+      <div class="col-6 col-sm-6 col-lg-4">
+        <h2>БЛОК БЛЯТЬ ТРИ</h2>
+        <p>И сюда что-нибудь ебанём!</p>
+      </div><!--/span-->
+    <h3 align="center">Только эту всю хуету не мешало бы по вертикали разместить</h3>
+    </div><!--/row-->
+  </div><!--/span-->
 
-<p>
-  <strong>Description:</strong>
-  <%= @website.description %>
-</p>
 
-<p>
-  <strong>Likes:</strong>
-  <%= @website.likes %>
-</p>
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+    <div class="list-group">
+    <a href="#" class="list-group-item active">Н</a>
+    <a href="#" class="list-group-item">А</a>
+    <a href="#" class="list-group-item">В</a>
+    <a href="#" class="list-group-item">И</a>
+    <a href="#" class="list-group-item">Г</a>
+    <a href="#" class="list-group-item">А</a>
+    <a href="#" class="list-group-item">Ц</a>
+    <a href="#" class="list-group-item">И</a>
+    <a href="#" class="list-group-item">Я</a>
+    </div>
+  </div><!--/span-->
+</div><!--/row-->
 
-<p>
-  <strong>User:</strong>
-  <%= @website.user_id %>
-</p>
+<hr>
 
-<p>
-  <strong>Created at:</strong>
-  <%= @website.created_at %>
-</p>
+<footer>
+<p>&copy; Company 2014</p>
+</footer>
 
-<p>
-  <strong>Updated at:</strong>
-  <%= @website.updated_at %>
-</p>
+</div><!--/.container-->
 
-<%= link_to 'Edit', edit_website_path(@website) %> |
-<%= link_to 'Back', websites_path %>

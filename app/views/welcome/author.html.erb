@@ -3,11 +3,11 @@
 </div>
 
 <div class="main">  
-	<% for i in 0...@columns do %>
+    <% for i in 0...@columns do %>
     <div class="column">
     	<% for j in 0..3 do %>
     	<% index = i*4+j %>
-        <%= link_to root_path do %>
+        <%= link_to @websites_author[index] do %>
         <div class="ws">
             <h3><%= @websites_author[index].website_name %></h3>
             <div class="discription">
@@ -29,7 +29,7 @@
 
     <div class="column">
     <% for i in 0...@rest do %>
-    <%= link_to root_path do %>
+    <%= link_to @websites_author[i] do %>
     <div class="ws">
         <h3><%= @websites_author[i].website_name %></h3>
         <div class="discription">

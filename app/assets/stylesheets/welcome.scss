@@ -1,258 +1,78 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-body
-{
-	background-image: url("../images/background2.jpg");
-	min-width: 1000px; 
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_bootstrap
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/theme';
+
+.fix_top {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 100%;	
 }
 
-div.carousel_content
-{
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.2);
-	margin-left:auto;
-    margin-right:auto;
-  	
+.all_websites_label {	
+	position: absolute;
+	padding: 2px;
 }
 
-div.carousel
-{
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2%;
-	margin-bottom: 10%;
+.all_websites_link {
+	position: absolute;
+	right: 1%;
+	top: 20px;
+	padding: 2px;
+	margin-right: 20%;
 }
 
-div.carousel_text
-{
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:3%;
-	width:60%;
-	height:40%;
-	font-size: 150%;
-
-}
-
-
-div.category 
-{
-	width:80%;
-	margin-left: auto;
-	margin-right: auto;
-	height: 20%;
-	background: rgba(0,0,0,0.5);
- 	position: relative;
-
-}
-
-div.info
-{
-	width: 60%;		
-	height:50px;
-	margin-left:auto;
-	margin-right: auto;
-	margin-top: 10%;
-	border: 2px solid white;
-  	border-radius: 10px;
-  	position: relative;
-  	display:flex;
-}
-
-div.item
-{
-	height:500px;
-}
-div.title
-{
-	width:100%;
-	height: 15%;
-}
-div.like
-{
-	height:50px;	
-	width:50px;
-	background-image: url("../images/like.png");
-	background-size: cover;
-	top:0px;
-	right: 20%;
-	position: absolute;	
-}
-
-div.likes
-{
-	top:30%;
-	right: 12%;
-	position: absolute;	
-	color:white;
-}
-
-h1.carousel_content_title
-{
+.header_for_slide {
+	height: 60px;
 	margin-left: 20%;
-	color: white;
 }
 
-	div.date
-{
-	width:30% ;
-	height:50px;
-	margin-top: 2%;
-	margin-left:10%;
-	color:white;
-}
-#myCarousel2{
-	margin-bottom: 20%;
-}
-
-p
-{
-	color:#3D3D3D;
-}
-
-p.allWS
-{
-	position: absolute;
-	right: 0px;
-	bottom: 0px;	
-}
-
-a
-{
-	color:white;
-}
-
-//////////////////////
-
-div.main
-{
-	width:80%;
-	height:900px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 2%;
-	margin-bottom: 1%;
-}
-
-div.category_all 
-{
-	margin-top: 5%;
-	width:77%;
-	margin-left: auto;
-	margin-right: auto;
-	height: 20%;
-	background: rgba(0,0,0,0.5);
- 	position: relative;
-
-}
-
-h1.category
-{
-	color:white;	
-}
-
-
-div.column
-{
-	width: 100%;
-	height: 23%;
-	margin-top: 1.5%;
-}
-
-div.ws
-{
+.left_float {
+	width: 30%;
 	float: left;
-	height:100%;
-	width:23%;
-	margin-left: 1.5%;
-	background: rgba(0,0,0,0.2);
-	border: 2px solid white;
-  	border-radius: 10px;
-  	position: relative;	
 }
 
-.ws:hover .discription
-{
-	visibility: visible;
+.top_block {
+
 }
 
-.ws:hover .info
-{
-	visibility: hidden;
+.row {
+    float: top;
 }
 
-.ws:hover h3
-{
-	visibility: hidden;
+.margin-blyat-dont-work {
+	margin: 10px;
 }
 
-div.discription
-{
-	visibility: hidden;
+.top {
 	position: absolute;
-	width:80%;
-	height:90%;	
-	top: 5%;
-	left: 10%;
-	overflow: hidden;
-	font: 12pt;
+	left: 5%;
+	right: 5%;
+	top: 7%;
 }
 
-div.info_all
-{
-	width: 98%;		
-	height:50px;
-	margin-left:auto;
-	margin-right: auto;
-	margin-top: 47%;
-  	position: relative;
-  	display:flex;
-
+p {
+	font-color: red;
+	font-size: 15px;
 }
 
-div.like_all
-{
-	height:50px;	
-	width:50px;
-	background-image: url("../images/like.png");
-	background-size: cover;
-	top:0px;
-	right: 30%;
-	position: absolute;	
+.link_bottom {
+	position: relative;
+	bottom: 2%;
 }
-
-div.likes_all
-{
-	top:30%;
-	right: 12%;
-	position: absolute;	
-	color:white;
-}
-
-div.date_all
-{
-	width:30% ;
-	height:50px;
-	top: 30%;
-    position: absolute;
-	margin-left:10%;
-	color:white;
-}
-
-h3
-{
-	color: white;
-	margin-left: 2%;
-}
-
-
-
-
-
-
-
-
-
