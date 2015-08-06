@@ -2,7 +2,8 @@ class WebsitesController < ApplicationController
   before_action :set_website, only: [:show, :edit, :update, :destroy]
 
   def all
-    @websites = Website.all  
+    @websites = Website.all
+    params.require  
   end
 
   # GET /websites

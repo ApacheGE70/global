@@ -1,29 +1,40 @@
-<div class="container">
-    <% for i in 0...@rows do %>
-    <div class="row">
-    <div class="margin-blyat-dont-work">
-        <% for j in 0..3 do %>
-        <% index = i*3+j %>
-        
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2><%= @websites_all[index].website_name %></h2>
-              <p><%= @websites_all[index].description %></p>
-              <div><%= link_to 'View details', @websites_all[index], class:"btn btn-default" %></div>
-            </div><!--/span-->
-        <% end %>
-    </div>
-    <% end %>
 
-    <div class="row">
-    <div class="margin-blyat-dont-work">
-        <% for i in 0...@rest do %>
-            <div class="col-md-4">
-              <h2><%= @websites_all[i].website_name %></h2>
-              <p><%= @websites_all[i].description %></p>
-              <div class="link_bottom"><%= link_to 'View details', @websites_all[i], class:"btn btn-default" %></div>
-            </div><!--/span-->
-        <% end %>
+<div class="main_block">
+  <div class="website">
+    <div class="name_site">
+      <h3 class="name">My name is trololololo</h3>
     </div>
+    <div class="description">
+      <p class="description"> то время, пока я размышлял над реализацией плагина, меня посетила типичная для большинства разработчиков мысль -"неужели из 7 миллиардов людей на всем земном шаре не нашлось человека у которого возникла бы и</p>
     </div>
+    <div class="info">
+      <div class="date">
+        <p class="date">12.31.4000</p>
+      </div>
+      <div class="likes">
+        <p class="likes">likes: 1024</p>
+      </div>
+    </div>
+  </div>
+   <div class="website">
+  </div>
+   <div class="website">
+  </div>
+   <div class="website">
+  </div>
+   <div class="website">
+  </div>
+   <div class="website">
+  </div>
+   <div class="website">
+  </div>
+     <div class="website">
+  </div>
+     <div class="website">
+  </div>
+     <div class="website">
+  </div>
+     <div class="website">
+  </div>
 
 </div>
