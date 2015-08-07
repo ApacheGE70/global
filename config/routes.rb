@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   resources :components 
   devise_for :users
   root to: 'welcome#index'
+  
   get "welcome/all"
-  get "welcome/author"
+  get "welcome/author/:id" => "welcome#author"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

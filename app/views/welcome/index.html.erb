@@ -1,79 +1,77 @@
 <div class="fix_top">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<!-- Indicators -->
-<div class="carousel-inner" role="listbox">
-  <div class="item active">
-    <div class="header_for_slide">
-      <h3 class="all_websites_label">The best websites today:</h3>
-      <%= link_to "show all websites", welcome_all_path, class: 'btn btn-default all_websites_link' %>
-    </div>
-    <div class="jumbotron">
-      <div class="container">
-        <h1><%= @websites_best.first.website_name %></h1>
-        <p><%= @websites_best.first.description %></p>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      
+      <!-- Item with the best works -->
+      <div class="item active">
+        <div class="header_for_slide">
+          <h3 class="all_websites_label">The best websites today:</h3>
+          <%= link_to "show all websites", welcome_all_path, class: 'btn btn-default all_websites_link' %>
+        </div>
         
-        <p><%= link_to "Show more", @websites_best.first, class: 'btn btn-primary btn-lg' %></p>
-      </div>
-    </div>
-
-    <div class="container">
-    <!-- Example row of columns -->
-      <div class="row">
-      <% if @websites_count > 1 %>  
-        <% for i in 1...@websites_count do %>
-        <div class="col-md-4">
-          <h2><%= @websites_best[i].website_name %></h2>
-          <p><%= @websites_best[i].description %></p>
-          
-          <p><%= link_to "View details", @websites_best[i], class: "btn btn-default" %></p>
+        <div class="jumbotron_2">
+          <div class="container">
+            <h1><%= @websites_best.first.website_name %></h1>
+            <p><%= @websites_best.first.description %></p>
+            <p><%= link_to "Show more", @websites_best.first, class: 'btn btn-primary btn-lg' %></p>
+          </div>
         </div>
-        <% end %>
-      <% end %>
 
+        <div class="container">
+          <div class="row">
+            <% if @websites_count > 1 %>  
+              <% for i in 1...@websites_count do %>
+              <div class="col-md-4">
+                <h2><%= @websites_best[i].website_name %></h2>
+                <p><%= @websites_best[i].description %></p>
+                <p><%= link_to "View details", @websites_best[i], class: "btn btn-default" %></p>
+              </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="item">
-    <div class="header_for_slide">
-      <h3 class="all_websites_label">The latest websites today:</h3>
-      <%= link_to "show all websites", welcome_all_path, class: 'btn btn-default all_websites_link' %>
-    </div>
-    <div class="jumbotron">
+    <!-- Item with the latest works -->
+    <div class="item">
+      <div class="header_for_slide">
+        <h3 class="all_websites_label">The latest websites today:</h3>
+        <%= link_to "show all websites", welcome_all_path, class: 'btn btn-default all_websites_link' %>
+      </div>
+      
+      <div class="jumbotron_2">
+        <div class="container">
+          <h1><%= @websites_last.first.website_name %></h1>
+          <p><%= @websites_last.first.description %></p>
+          <p><%= link_to "Show more", @websites_last.first, class: 'btn btn-primary btn-lg' %></p>
+        </div>
+      </div>
+
       <div class="container">
-        <h1><%= @websites_last.first.website_name %></h1>
-        <p><%= @websites_last.first.description %></p>
-        <p><%= link_to "Show more", @websites_last.first, class: 'btn btn-primary btn-lg' %></p>
-      </div>
-    </div>
-
-    <div class="container">
-    <!-- Example row of columns -->
-      <div class="row">
-      <% if @websites_count > 1 %>  
-        <% for i in 1...@websites_count do %>
-        <div class="col-md-4">
-          <h2><%= @websites_last[i].website_name %></h2>
-          <p><%= @websites_last[i].description %></p>
-          
-          <p><%= link_to "View details", @websites_last[i], class: "btn btn-default" %></p>
+        <div class="row">
+          <% if @websites_count > 1 %>  
+            <% for i in 1...@websites_count do %>
+              <div class="col-md-4">
+                <h2><%= @websites_last[i].website_name %></h2>
+                <p><%= @websites_last[i].description %></p>
+                <p><%= link_to "View details", @websites_last[i], class: "btn btn-default" %></p>
+              </div>
+            <% end %>
+          <% end %>
         </div>
-        <% end %>
-      <% end %>
-
       </div>
     </div>
-  </div>
+
   <hr>
-</div> <!-- /container -->
+  </div> <!-- /container -->
 </div> <!-- /carousel -->
 
-<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>

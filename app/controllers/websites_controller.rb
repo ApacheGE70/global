@@ -2,8 +2,7 @@ class WebsitesController < ApplicationController
   before_action :set_website, only: [:show, :edit, :update, :destroy]
 
   def all
-    @websites = Website.all
-    params.require  
+    @websites = Website.all  
   end
 
   # GET /websites
@@ -15,6 +14,8 @@ class WebsitesController < ApplicationController
   # GET /websites/1
   # GET /websites/1.json
   def show
+    user_id = Website.find(params[:id]).user_id
+    @path_to_author = "/welcome/author/" + user_id.to_s
   end
 
   # GET /websites/new

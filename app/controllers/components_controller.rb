@@ -27,7 +27,7 @@ class ComponentsController < ApplicationController
 	  def create
 
 	    @component = Component.new(component_params)
-	    @parameter_suka = params
+	    @parameter_suka = params[:component]
 
 	    respond_to do |format|
 	      if @component.save(component_params)

@@ -6,14 +6,11 @@ class WelcomeController < ApplicationController
 	end
 
 	def all
-		@websites_all = Website.order(:likes)
-		@rows = @websites_all.count / 3
-		@rest = @websites_all.count % 3
+		@websites = Website.order(:likes)
 	end
 	
 	def author
-		@websites_author = Website.order(:user_id)
-		@columns = @websites_author.count / 3
-		@rest = @websites_author.count % 3
+		params[:user_id]
+		@websites = Website.where(:user_id => params[:id])
 	end
 end
